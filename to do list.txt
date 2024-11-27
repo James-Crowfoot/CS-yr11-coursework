@@ -1,0 +1,30 @@
+1 A menu is displayed allowing the user to select from the following options: 
+Play Game
+Quit.
+
+2      If the user selects the ‘Quit’ option then a suitable message should be displayed and the program ends.
+
+3      If the user selects the ‘Play Game’ option they are asked to enter the number of cards to be played. If the entered number is less than 4 or greater than 30, or is an odd number, then an appropriate error message is displayed, and the user returns to the menu.
+
+4      The program should then read in the names of the dogs from the text file dogs.txt, creating a card for each dog.
+
+5      The program should randomly generate a value for each category for each dog using the ranges described on page 2, adding them to each dog’s card.
+
+6      The number of cards entered in task 3 are then separated into two equal piles, the player’s pile and the computer’s pile. If you wish to extend your program further then the cards may be shuffled before they are separated into two piles, however you do not have to do this. 
+
+7      The first card in the player’s pile is displayed and the user is asked to enter a category. The categories are exercise, intelligence, friendliness and drool.
+
+8      The first card in the computer’s pile is then displayed.
+
+9      The value on the player’s card for the chosen category is compared to the value in the same category on the computer’s card.
+•       If the category chosen is exercise, intelligence or friendliness then the higher value wins the round.
+•       If the category chosen is drool then the lower value wins the round.    	If the values are the same then the player wins the round.
+
+10   If the player wins the round then both cards are moved to the bottom of the player’s pile. If the computer wins the round then both cards are moved to the bottom of the computer’s pile. An appropriate message saying what the result of the comparison was and who won that round should be displayed.
+
+11   If the player or the computer now has all the cards then they have won the game and a suitable message should be displayed. The program should return to the main menu.
+
+12   Otherwise, the next round is played and the winner of the previous round chooses the category.
+•       If the player won the previous round then the card that is now on the top of the player’s pile is displayed and they are asked to choose a category.
+•       If the computer won the previous round then a random category is chosen. The cards that are now on the top of the player’s and computer’s piles are displayed.
+•       The game continues until the player or the computer has won.       
