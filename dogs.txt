@@ -1,31 +1,31 @@
 EXCERSISE, INTELLIGENCE, FRIEDNLINESS, DROOL, NAME
-05520615Annie The afghan hound
-03770735Bertie the Boxer
-02710149Betty the Borzoi
-04330169Charlie the Chihuahua
-01360656Chaz the Cocker Spaniel
-02590580Donald the Dalmatian
-05360172Dottie the Doberman
-03060088Fern the Fox Terrier
-02480206Frank the French Bulldog
-01370995George the Great Dane
-01460370Gertie the Greyhound
-05740466Harry the Harrier
-01440646Ian the Irish Wolfhound
-02490144Juno the Jack Russell
-01440929Keith the Kerry Blue
-04820492Larry the Labrador
-02080278Marge the Maltese
-04130713Max the Mutt
-02920458Nutty the Newfoundland
-03830243Olive the Old English Sheepdog
-03530730Peter the Pug
-04720920Poppy the Pekingese
-02060944Rosie the Rottweiler
-02070608Ruby the Retriever
-05320649Sam the Springer Spaniel
-03880708Sukie the Saluki
-05070736Vernon the Vizsla
-04300718Whilma the West Highland Terrier
-02170716William the Whippet
-05320145Yolande the Yorkshire Terrier
+05520615Annie The afghan hound.
+03770735Bertie the Boxer.
+02710149Betty the Borzoi.
+04330169Charlie the Chihuahua.
+01360656Chaz the Cocker Spaniel.
+02590580Donald the Dalmatian.
+05360172Dottie the Doberman.
+03060088Fern the Fox Terrier.
+02480206Frank the French Bulldog.
+01370995George the Great Dane.
+01460370Gertie the Greyhound.
+05740466Harry the Harrier.
+01440646Ian the Irish Wolfhound.
+02490144Juno the Jack Russell.
+01440929Keith the Kerry Blue.
+04820492Larry the Labrador.
+02080278Marge the Maltese.
+04130713Max the Mutt.
+02920458Nutty the Newfoundland.
+03830243Olive the Old English Sheepdog.
+03530730Peter the Pug.
+04720920Poppy the Pekingese.
+02060944Rosie the Rottweiler.
+02070608Ruby the Retriever.
+05320649Sam the Springer Spaniel.
+03880708Sukie the Saluki.
+05070736Vernon the Vizsla.
+04300718Whilma the West Highland Terrier.
+02170716William the Whippet.
+05320145Yolande the Yorkshire Terrier.
