@@ -27,25 +27,37 @@ total_cards = 0
 reply = ""
 value_acceptable = False
 
-#DOGS
-'''
-Excersise = :( 1 - 5 :)
-Intelligence = :( 1 - 100 :)
-Friendliness = :( 1 - 10 :)
-Drool = :) 1 - 10 :(
+excersise=0
+intelligence=0
+friendliness=0
+drool=0
 
-'''
-EXAMPLE = ["NAME", "EXCERSISE", "INTELLIGENCE", "FRIENDLINESS", "DROOL"]
-ANAFHO = ["Annie the Afghan Hound", 4, 15, 6, 1]
-BERBOX = ["Bertie the Boxer", 5, 50, 9, 9]
-BETBOR = ["Betty the Borzoi", 3, 25, 6, 2]
-CHACHI = ["Charlie the Chihuahua", 2, 30, 2, 2]
-CHCOSP = ["Chaz the Cocker Spaniel", 2, 80, 9, 4]
-DONDAL = ["Donald the Dalmatian", 5, 65, 7, 3]
+file = open("dogs.txt","rt")
+for i in range(1,31):
+	excersise=0
+	intelligence=0
+	friendliness=0
+	drool=0
+	dog_card=[]
+	dog = file.readline()
+	stats = dog[0:8]
+	name=dog[8:]
+	excersise=stats[0:2]
+	intelligence=stats[2:4]
+	friendliness=stats[4:6]
+	drool=stats[6:8]
+	dog_card.append(excersise)
+	dog_card.append(intelligence)
+	dog_card.append(friendliness)
+	dog_card.append(drool)
+	dog_card.append(name)
+	print(dog_card)
+	cards.append(dog_card)
+	
+file.close()
+print(cards)
+debug_end()
 
-
-
-cards = [ANAFHO, BERBOX, BETBOR, CHACHI, CHCOSP, DONDAL]
 total_cards = len(cards)
 
 
@@ -130,7 +142,6 @@ if "1" in reply or "PLAY" in reply:
 	loading(1,3)
 elif "2" in reply or "QUIT" in reply:
 	'''If the user selects the ‘Quit’ option then a suitable message should be 		  displayed and the program ends.'''
-
 	sleep(0.5)
 	clear()
 	debug("quit",1)
@@ -162,7 +173,8 @@ finally:
 	cards_to_be_played = reply
 	deal_cards(cards_to_be_played,cards,debug)
 
-
+print(computer_cards)
+print(player_cards)
 debug("GAME SEGMENT",1)
 
 # G A M E   S E G M E N T#
