@@ -2,6 +2,7 @@ from random import randint
 from time import sleep
 from replit import clear
 from colorama import Fore, Back, Style
+import sys
 
 def slow_print(text,speed):
 		for char in text:
@@ -50,7 +51,8 @@ def loading(load_speed,loop):
 	sleep(1)
 	clear()
 
-
+def debug_end():
+	sys.exit("Debug test. Ended Program")
 
 
 
