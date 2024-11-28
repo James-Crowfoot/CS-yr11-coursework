@@ -4,14 +4,13 @@ from colorama import Fore, Back, Style, init
 import os
 import sys
 from replit import clear
-import getpass
 from random import randint
 from game_tools import *
 
 '''
 https://docs.google.com/document/d/10rOlHKvELJlZe1rTSGimzs3Q4rMm99l2Q7uR4lm9mt4/edit
 '''
-
+#EXCERSISE, INTELLIGENCE, FRIEDNLINESS, DROOL, NAME
 
 #VARIABLES
 debug_mode = 2 # DEBUG MODE - 1=displays messages during code operation
@@ -33,19 +32,19 @@ friendliness=0
 drool=0
 
 file = open("dogs.txt","rt")
-for i in range(1,31):
+for i in range(0,30):
 	excersise=0
 	intelligence=0
 	friendliness=0
 	drool=0
 	dog_card=[]
 	dog = file.readline()
-	stats = dog[0:8]
-	name=dog[8:]
-	excersise=stats[0:2]
-	intelligence=stats[2:4]
-	friendliness=stats[4:6]
-	drool=stats[6:8]
+	NameEnd=dog.index(".")
+	name=dog[0:NameEnd]
+	excersise=randint(1,5)
+	intelligence=randint(1,100)
+	friendliness=randint(1,10)
+	drool=randint(1,10)
 	dog_card.append(excersise)
 	dog_card.append(intelligence)
 	dog_card.append(friendliness)
