@@ -10,7 +10,11 @@ Quit.
 
 5      The program should randomly generate a value for each category for each dog using the ranges described on page 2, adding them to each dog’s card.
 
-6      The number of cards entered in task 3 are then separated into two equal piles, the player’s pile and the computer’s pile. If you wish to extend your program further then the cards may be shuffled before they are separated into two piles, however you do not have to do this. 
+---------------------↑COMPLETE↑--------------------------
+-----------------------TASKS-----------------------------
+--------------------↓INCOMPLETE↓-------------------------
+
+6      The number of cards entered in task 3 are then separated into two equal piles, the player’s pile and the computer’s pile. If you wish to extend your program further then the cards may be shuffled before they are separated into two piles, however you do not have to do this.   [UNCHECKED IF COMPLETE]
 
 7      The first card in the player’s pile is displayed and the user is asked to enter a category. The categories are exercise, intelligence, friendliness and drool.
 
