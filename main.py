@@ -9,6 +9,7 @@ from game_tools import *
 import binascii
 
 
+
 '''
 https://docs.google.com/document/d/10rOlHKvELJlZe1rTSGimzs3Q4rMm99l2Q7uR4lm9mt4/edit
 '''
@@ -43,6 +44,12 @@ intelligence = 0
 friendliness = 0
 drool = 0
 
+game = True
+current_card = 0
+
+
+#LOADING DOGS FROM TXT
+
 file = open("dogs.txt", "rt")
 for i in range(0, 30):
 	excersise = 0
@@ -75,6 +82,9 @@ total_cards = len(cards)
 
 
 def debug(message, log_check):
+	'''
+	message, log check
+	'''
 	global debug_mode
 	global debug_log
 	debug_log.append(message)
@@ -204,9 +214,7 @@ current_card = 0
 while game == True:
 	CurrentPlayerCard = player_cards[current_card]
 	CurrentComputerCard = computer_cards[current_card]
-
-	#extract values to display
-	#EXCERSISE, INTELLIGENCE, FRIEDNLINESS, DROOL, NAME
+	
 	PlayExcersise = CurrentPlayerCard[0]
 	PlayIntelligence = CurrentPlayerCard[1]
 	PlayFriendliness = CurrentPlayerCard[2]
@@ -218,66 +226,8 @@ while game == True:
 	BotFriendliness = CurrentComputerCard[2]
 	BotDrool = CurrentComputerCard[3]
 	BotName = CurrentComputerCard[4]
-
-	NameAddon=""
-	msg="|  name: "+ str(PlayName)
-	LenName=len(msg)
-	#print(LenName)
-	for i in range(0,32-LenName):
-		NameAddon+=" "
-		
-	ExcersiseAddon=""
-	msg="|  excersise: "+ str(PlayExcersise)
-	LenExcersise=len(msg)
-	#print(LenExcersise)
-	for i in range(0,32-LenExcersise):
-		ExcersiseAddon+=" "
-
-	IntelligenceAddon=""
-	msg="|  intelligence: "+ str(PlayIntelligence)
-	LenIntelligence=len(msg)
-	#print(LenIntelligence)
-	for i in range(0,32-LenIntelligence):
-		IntelligenceAddon+=" "
-
-	FriendlinessAddon=""
-	msg="|  friendliness: "+ str(PlayFriendliness)
-	LenFriendliness=len(msg)
-	#print(LenFriendliness)
-	for i in range(0,32-LenFriendliness):
-		FriendlinessAddon+=" "
-
-	DroolAddon=""
-	msg="|  drool: "+ str(PlayDrool)
-	LenDrool=len(msg)
-	#print(LenDrool)
-	for i in range(0,32-LenDrool):
-		DroolAddon+=" "
 	
-	ascii = ASCIIdogs[randint(0,4)]
-	print("\n\n-*-------- celebrity dogs --------*-")
-
-	#Dog image
-	for a in ascii:
-		DogAddon=""
-		msg="|  "+a
-		LenDog=len(msg)
-		#print(LenDog)
-		for i in range(0,32-LenDog):
-			DogAddon+=" "
-		print("|   "+a,DogAddon,"|")
-	#Dog Stats
-	print("|  ~                               |")
-	print("|  name: ", PlayName,NameAddon,"|")
-	print("|  ~                               |")
-	print("|  excersise: ", PlayExcersise,ExcersiseAddon,"|")
-	print("|  ~                               |")
-	print("|  intelligence: ", PlayIntelligence,IntelligenceAddon,"|")
-	print("|  ~                               |")
-	print("|  friendliness: ", PlayFriendliness,FriendlinessAddon,"|")
-	print("|  ~                               |")
-	print("|  drool: ", PlayDrool,DroolAddon,"|")
-	print("|  ~                               |")
-	print("-*--------------------------------*-\n")
-	
+	display_player_card(player_cards,computer_cards,current_card,ASCIIdogs)
 	category = input("Category: ")
+	display_computer_card(player_cards,computer_cards,current_card,ASCIIdogs)
+	
