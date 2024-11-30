@@ -5,6 +5,15 @@ from colorama import Fore, Back, Style
 import sys
 
 def slow_print(text,speed):
+	'''
+	text:str(), speed:int()
+	text will be printed one character at a time,
+	print(char)
+	sleep(speed)
+	----------------------------------------
+	    >>>slowprint("Hello World",0.1)
+			Hello World
+	'''
 		for char in text:
 				print(char, end='', flush=True)
 				sleep(speed)
@@ -14,6 +23,14 @@ def slow_print(text,speed):
 
 
 def shuffle_cards(array,disp):
+	'''
+	array : array
+	disp : int() 1 or 0
+	---------------------------
+	>>>#shuffles cards
+	>>>shuffle_cards(array,1)
+	cards shuffled
+	'''
 	for i in range(0,len(array)):
 		pos_a = randint(0,len(array))
 		pos_b = randint(0,len(array))
@@ -26,21 +43,37 @@ def shuffle_cards(array,disp):
 
 
 
-def deal_cards(num_cards,cards,disp): #total cards to be played, array of cards, debug.
-	global player_cards
-	global computer_cards
-	cards_each = num_cards // 2 #cards each is half of the total amount of cards
-	player_cards = cards[0:cards_each]
-	computer_cards = cards[cards_each:(cards_each*2)]
-	#print(player_cards)
-	#print()
-	#print(computer_cards)
+def deal_cards(num_cards,cards,disp,comp_cards,play_cards): 
+	'''
+	num_cards:int()  total number of cards
+	cards:array  array of cards
+	disp:int() 1 or 0  prints "cards dealt"
+	comp_cards:array  computer cards
+	play_cards:array  player cards
+	---------------------------------
+	>>>deal_cards(20,array1,0,array2,array3)
+	'''
+	#total cards to be played, array of cards, debug.
+	cards_each = int(num_cards / 2)#cards each is half of the total amount of cards
+	print(cards_each)
+	play_cards = cards[0:cards_each]
+	comp_cards = cards[cards_each:(cards_each*2)]
+	print(play_cards)
+	print()
+	print(comp_cards)
 	if disp == 1:
 		print("Cards Dealt")
 
 
 
 def loading(load_speed,loop):
+	'''
+	load_speed: int() or float()
+	loop: int()
+	----------------------
+	load_speed : speed [see slow_print()]
+	loop: how many times for the loading animation to play
+	'''
 	step = load_speed/10
 	for i in range(0,loop):
 		clear()
@@ -52,6 +85,9 @@ def loading(load_speed,loop):
 	clear()
 
 def debug_end():
+	'''
+	ends program at this point
+	'''
 	sys.exit("Debug test. Ended Program")
 
 
