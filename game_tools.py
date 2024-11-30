@@ -14,10 +14,10 @@ def slow_print(text,speed):
 	    >>>slowprint("Hello World",0.1)
 			Hello World
 	'''
-		for char in text:
-				print(char, end='', flush=True)
-				sleep(speed)
-		print(flush=False)
+	for char in text:
+			print(char, end='', flush=True)
+			sleep(speed)
+	print(flush=False)
 
 #slow_print("Hello, World!",0.05)
 
@@ -93,25 +93,171 @@ def debug_end():
 
 
 
-### Code Lock ###
-'''
-print(Fore.RESET + Back.RESET,
-			"CODE LOCKED. ENTER KEY" + Fore.BLACK + Back.BLACK + Style.DIM)
-unlock = os.getenv("run_key")
-#key = input("key: ")
+def display_player_card(player_cards,computer_cards,current_card,ASCIIdogs):
+	'''
+	player_cards:array
+	computer_cards:array
+	current_card:int()
+	ASCIIdogs:array
+	-------------------------------
+	displays current player card
+	'''
+	CurrentPlayerCard = player_cards[current_card]
 
-# masking the password
-key = getpass.getpass('Enter unlock key: ')
+	#extract values to display
+	#EXCERSISE, INTELLIGENCE, FRIEDNLINESS, DROOL, NAME
+	PlayExcersise = CurrentPlayerCard[0]
+	PlayIntelligence = CurrentPlayerCard[1]
+	PlayFriendliness = CurrentPlayerCard[2]
+	PlayDrool = CurrentPlayerCard[3]
+	PlayName = CurrentPlayerCard[4]
 
-if key != unlock:
-	sys.exit("Incorrect Key")
-	cduld = False
+	NameAddon=""
+	msg="|  name: "+ str(PlayName)
+	LenName=len(msg)
+	#print(LenName)
+	for i in range(0,32-LenName):
+		NameAddon+=" "
 
-clear()
-clear = lambda: print("\033c", end="", flush=True)
-print("RESET TEXT STYLE" + Fore.RESET + Back.RESET + Style.RESET_ALL)
-clear()
-print(Fore.GREEN + "CODE UNLOCKED" + Fore.RESET)
-cduld = True
-'''
+	ExcersiseAddon=""
+	msg="|  excersise: "+ str(PlayExcersise)
+	LenExcersise=len(msg)
+	#print(LenExcersise)
+	for i in range(0,32-LenExcersise):
+		ExcersiseAddon+=" "
 
+	IntelligenceAddon=""
+	msg="|  intelligence: "+ str(PlayIntelligence)
+	LenIntelligence=len(msg)
+	#print(LenIntelligence)
+	for i in range(0,32-LenIntelligence):
+		IntelligenceAddon+=" "
+
+	FriendlinessAddon=""
+	msg="|  friendliness: "+ str(PlayFriendliness)
+	LenFriendliness=len(msg)
+	#print(LenFriendliness)
+	for i in range(0,32-LenFriendliness):
+		FriendlinessAddon+=" "
+
+	DroolAddon=""
+	msg="|  drool: "+ str(PlayDrool)
+	LenDrool=len(msg)
+	#print(LenDrool)
+	for i in range(0,32-LenDrool):
+		DroolAddon+=" "
+
+	ascii = ASCIIdogs[randint(0,4)]
+	print(Fore.LIGHTBLUE_EX+"\n\n-*--------- player card ---------*-")
+
+	#Dog image
+	for a in ascii:
+		DogAddon=""
+		msg="|  "+a
+		LenDog=len(msg)
+		#print(LenDog)
+		for i in range(0,32-LenDog):
+			DogAddon+=" "
+		print("|   "+a,DogAddon,"|")
+	#Dog Stats
+	print("|  ~                               |")
+	print("|  name: ", PlayName,NameAddon,"|")
+	print("|  ~                               |")
+	print("|  excersise: ", PlayExcersise,ExcersiseAddon,"|")
+	print("|  ~                               |")
+	print("|  intelligence: ", PlayIntelligence,IntelligenceAddon,"|")
+	print("|  ~                               |")
+	print("|  friendliness: ", PlayFriendliness,FriendlinessAddon,"|")
+	print("|  ~                               |")
+	print("|  drool: ", PlayDrool,DroolAddon,"|")
+	print("|  ~                               |")
+	print("-*--------------------------------*-\n"+Fore.RESET)
+
+
+
+
+
+
+
+
+
+def display_computer_card(player_cards,computer_cards,current_card,ASCIIdogs):
+	'''
+	player_cards:array
+	computer_cards:array
+	current_card:int()
+	ASCIIdogs:array
+	-------------------------------
+	displays current player card
+	'''
+	CurrentComputerCard = computer_cards[current_card]
+
+	#extract values to display
+	#EXCERSISE, INTELLIGENCE, FRIEDNLINESS, DROOL, NAME
+
+	BotExcersise = CurrentComputerCard[0]
+	BotIntelligence = CurrentComputerCard[1]
+	BotFriendliness = CurrentComputerCard[2]
+	BotDrool = CurrentComputerCard[3]
+	BotName = CurrentComputerCard[4]
+
+	NameAddon=""
+	msg="|  name: "+ str(BotName)
+	LenName=len(msg)
+	#print(LenName)
+	for i in range(0,32-LenName):
+		NameAddon+=" "
+
+	ExcersiseAddon=""
+	msg="|  excersise: "+ str(BotExcersise)
+	LenExcersise=len(msg)
+	#print(LenExcersise)
+	for i in range(0,32-LenExcersise):
+		ExcersiseAddon+=" "
+
+	IntelligenceAddon=""
+	msg="|  intelligence: "+ str(BotIntelligence)
+	LenIntelligence=len(msg)
+	#print(LenIntelligence)
+	for i in range(0,32-LenIntelligence):
+		IntelligenceAddon+=" "
+
+	FriendlinessAddon=""
+	msg="|  friendliness: "+ str(BotFriendliness)
+	LenFriendliness=len(msg)
+	#print(LenFriendliness)
+	for i in range(0,32-LenFriendliness):
+		FriendlinessAddon+=" "
+
+	DroolAddon=""
+	msg="|  drool: "+ str(BotDrool)
+	LenDrool=len(msg)
+	#print(LenDrool)
+	for i in range(0,32-LenDrool):
+		DroolAddon+=" "
+
+	ascii = ASCIIdogs[randint(0,4)]
+	print(Fore.LIGHTRED_EX+"\n\n-*-------- computer card --------*-")
+
+	#Dog image
+	for a in ascii:
+		DogAddon=""
+		msg="|  "+a
+		LenDog=len(msg)
+		#print(LenDog)
+		for i in range(0,32-LenDog):
+			DogAddon+=" "
+		print("|   "+a,DogAddon,"|")
+	#Dog Stats
+	print("|  ~                               |")
+	print("|  name: ", BotName,NameAddon,"|")
+	print("|  ~                               |")
+	print("|  excersise: ", BotExcersise,ExcersiseAddon,"|")
+	print("|  ~                               |")
+	print("|  intelligence: ", BotIntelligence,IntelligenceAddon,"|")
+	print("|  ~                               |")
+	print("|  friendliness: ", BotFriendliness,FriendlinessAddon,"|")
+	print("|  ~                               |")
+	print("|  drool: ", BotDrool,DroolAddon,"|")
+	print("|  ~                               |")
+	print("-*--------------------------------*-\n"+Fore.RESET)
