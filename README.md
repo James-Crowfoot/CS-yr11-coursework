@@ -1,4 +1,4 @@
-<h1>CS-yr11-coursework</h1>h1
+<h1>CS-yr11-coursework</h1>
 - 🖥️ This is my GCSE Computer Science NEA
 
 - 🃏 The task is to create a top trumps based card game.
