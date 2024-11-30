@@ -1,8 +1,12 @@
 <h1>CS-yr11-coursework</h1>h1
 - 🖥️ This is my GCSE Computer Science NEA
+
 - 🃏 The task is to create a top trumps based card game.
+  
 - 🔧 I am overengineering this as far as I possible can because why not
-- 👋🏻 say Hi to  ASCII James
+  
+- 👋🏻 say Hi to  ASCII James (you need to zoom out)
+  
 <pre>
 $B@@@@$$$$@B@@%B@%8&&$%@$$$$B@$@@@$$$$$$B@@@a.,#a-..:*#W*.....##=...*#&WM++W#&a#:*:.......&&@&*a..B..WB.B.$%B-W&.o*MB@o,B@88W..=....+M#+=o++@8#a&..8..$@8+:..%..,B%...&......BM..-.#o:%.:..B@@%MM&..8&&$
 $BB@@@$$$@B@$BB$B8&W%B%@$$$@@$$@@$$$$$$@@$@@a.+BMa-:+&%*#&+.:#WW&:---+*+**a*W$&#W&WM*,....+*+..M.,8..W%.&.W&M.&&.WaB%$o*o*#8o..#....o#o+=o-=BBW+#..8..@@&-:,.$..:8B...&......$B..*.+#+W=:..B$@BMMW..*88$
