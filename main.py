@@ -244,8 +244,12 @@ while game == True:
 		BotStat = BotExcersise
 		if PlayerStat > BotStat:
 			print("Player Wins!")
+			computer_cards.pop(current_card)
+			player_cards.append(CurrentComputerCard)
 		elif PlayerStat < BotStat:
 			print("Bot Wins!")
+			player_cards.pop(current_card)
+			computer_cards.append(CurrentPlayerCard)
 		else:
 			print("It's a Draw!")
 
