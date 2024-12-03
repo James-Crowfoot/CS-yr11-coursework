@@ -228,6 +228,23 @@ while game == True:
 	BotName = CurrentComputerCard[4]
 	
 	display_player_card(player_cards,computer_cards,current_card,ASCIIdogs)
-	category = input("Category: ")
+	ValidCategory = False
+	category = ""
+	while ValidCategory is False:
+		category = input("Category: ")
+		if category.upper() in "EXCERSISE INTELLIGENCE FRIENDLINESS DROOL":
+			ValidCategory = True
+		else:
+			print("Category must be: EXCERSISE INTELLIGENCE FRIENDLINESS DROOL")
+	if category.lower() == "excersise":
+		PlayerStat = PlayExcersise
+		BotStat = BotExcersise
+		if PlayerStat > BotStat:
+			print("Player Wins!")
+		elif PlayerStat < BotStat:
+			print("Bot Wins!")
+		else:
+			print("It's a Draw!")
+		
 	display_computer_card(player_cards,computer_cards,current_card,ASCIIdogs)
 	
