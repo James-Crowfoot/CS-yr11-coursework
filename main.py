@@ -236,12 +236,45 @@ while game == True:
 			ValidCategory = True
 		else:
 			print("Category must be: EXCERSISE INTELLIGENCE FRIENDLINESS DROOL")
+
+
+	
 	if category.lower() == "excersise":
 		PlayerStat = PlayExcersise
 		BotStat = BotExcersise
 		if PlayerStat > BotStat:
 			print("Player Wins!")
 		elif PlayerStat < BotStat:
+			print("Bot Wins!")
+		else:
+			print("It's a Draw!")
+
+	elif category.lower() == "intelligence":
+		PlayerStat = PlayIntelligence
+		BotStat = BotIntelligence
+		if PlayerStat > BotStat:
+			print("Player Wins!")
+		elif PlayerStat < BotStat:
+			print("Bot Wins!")
+		else:
+			print("It's a Draw!")
+
+	elif category.lower() == "friendliness":
+		PlayerStat = PlayFriendliness
+		BotStat = BotFriendliness
+		if PlayerStat > BotStat:
+			print("Player Wins!")
+		elif PlayerStat < BotStat:
+			print("Bot Wins!")
+		else:
+			print("It's a Draw!")
+
+	elif category.lower() == "drool":
+		PlayerStat = PlayDrool
+		BotStat = BotDrool
+		if PlayerStat < BotStat:
+			print("Player Wins!")
+		elif PlayerStat > BotStat:
 			print("Bot Wins!")
 		else:
 			print("It's a Draw!")
