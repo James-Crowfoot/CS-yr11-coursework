@@ -211,6 +211,7 @@ print("\n")
 
 game = True
 current_card = 0
+PrevWinner = "Player"
 while game == True:
 	CurrentPlayerCard = player_cards[current_card]
 	CurrentComputerCard = computer_cards[current_card]
@@ -243,45 +244,90 @@ while game == True:
 		PlayerStat = PlayExcersise
 		BotStat = BotExcersise
 		if PlayerStat > BotStat:
-			print("Player Wins!")
+			slow_print("Player Wins!",0.1)
+			
 			computer_cards.pop(current_card)
 			player_cards.append(CurrentComputerCard)
+			player_cards.pop(current_card)
+			player_cards.append(CurrentPlayerCard)
+		
 		elif PlayerStat < BotStat:
-			print("Bot Wins!")
+			slow_print("Bot Wins!",0.1)
 			player_cards.pop(current_card)
 			computer_cards.append(CurrentPlayerCard)
+			computer_cards.pop(current_card)
+			computer_cards.append(CurrentComputerCard)
 		else:
-			print("It's a Draw!")
+			slow_print("It's a Draw!",0.1)
 
 	elif category.lower() == "intelligence":
 		PlayerStat = PlayIntelligence
 		BotStat = BotIntelligence
 		if PlayerStat > BotStat:
-			print("Player Wins!")
+			slow_print("Player Wins!",0.1)
+			
+			computer_cards.pop(current_card)
+			player_cards.append(CurrentComputerCard)
+			
+			player_cards.pop(current_card)
+			player_cards.append(CurrentPlayerCard)
+		
 		elif PlayerStat < BotStat:
-			print("Bot Wins!")
+			slow_print("Bot Wins!",0.1)
+			player_cards.pop(current_card)
+			computer_cards.append(CurrentPlayerCard)
+			computer_cards.pop(current_card)
+			computer_cards.append(CurrentComputerCard)
 		else:
-			print("It's a Draw!")
+			slow_print("It's a Draw!",0.1)
 
 	elif category.lower() == "friendliness":
 		PlayerStat = PlayFriendliness
 		BotStat = BotFriendliness
 		if PlayerStat > BotStat:
-			print("Player Wins!")
+			slow_print("Player Wins!",0.1)
+			computer_cards.pop(current_card)
+			player_cards.append(CurrentComputerCard)
+			player_cards.pop(current_card)
+			player_cards.append(CurrentPlayerCard)
 		elif PlayerStat < BotStat:
-			print("Bot Wins!")
+			slow_print("Bot Wins!",0.1)
+			player_cards.pop(current_card)
+			computer_cards.append(CurrentPlayerCard)
+			computer_cards.pop(current_card)
+			computer_cards.append(CurrentComputerCard)
 		else:
-			print("It's a Draw!")
+			slow_print("It's a Draw!",0.1)
 
 	elif category.lower() == "drool":
 		PlayerStat = PlayDrool
 		BotStat = BotDrool
 		if PlayerStat < BotStat:
-			print("Player Wins!")
+			slow_print("Player Wins!",0.1)
+			computer_cards.pop(current_card)
+			player_cards.append(CurrentComputerCard)
+			player_cards.pop(current_card)
+			player_cards.append(CurrentPlayerCard)
+			
 		elif PlayerStat > BotStat:
-			print("Bot Wins!")
+			slow_print("Bot Wins!",0.1)
+			player_cards.pop(current_card)
+			computer_cards.append(CurrentPlayerCard)
+			computer_cards.pop(current_card)
+			computer_cards.append(CurrentComputerCard)
 		else:
-			print("It's a Draw!")
-		
+			slow_print("It's a Draw!",0.1)
+
+	sleep(2)
 	display_computer_card(player_cards,computer_cards,current_card,ASCIIdogs)
+	sleep(2)
+	if len(computer_cards) == 0:
+		game = False
+		print("PLAYER WINS")
+	elif len(player_cards) == 0:
+		game = False
+		print("COMPUTER WINS")
+
+
+sys.exit("GAME OVER")
 	
